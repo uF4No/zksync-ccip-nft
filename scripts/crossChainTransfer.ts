@@ -21,7 +21,7 @@ async function main() {
   
   const from = `0x466ff3c5C76445823b49dF047d72663B8eAe9272`;
   const to = `0x466ff3c5C76445823b49dF047d72663B8eAe9272`;
-  const tokenId = 1; // put NFT token id here
+  const tokenId = 0; // put NFT token id here
   const destinationChainSelector = `6898391096552792247`;
   const payFeesIn = 1; // 0 - Native, 1 - LINK
 
@@ -32,7 +32,7 @@ async function main() {
       to,
       tokenId,
       destinationChainSelector,
-      payFeesIn, {gasLimit: 7000000}
+      payFeesIn,
   );
 
   console.log(`Transaction hash: ${tx.hash}`);
