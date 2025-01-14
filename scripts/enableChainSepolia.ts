@@ -17,8 +17,8 @@ async function main() {
   const wallet = new Wallet(privateKey);
   const signer = wallet.connect(provider);
 
-  const xNftAddressSepolia = `0xD61fb8015Bf9b7631eB8779D01951ce7ec5e07cE`;
-  const xNftAddressZKsync = `0x3C7662938bAE7A1DDcC11bc25ca1EEFf71B4CC90`;
+  const xNftAddressSepolia = `0xBcB23ED6FeFF554E37dBEb6CcdC18A3CfDFA8fD8`;
+  const xNftAddressZKsync = `0x9B736CD0cA3353e019Fba841BA7f0506ad93d573`;
   const chainSelectorZKsync = `6898391096552792247`;
   const ccipExtraArgs = `0x97a657c90000000000000000000000000000000000000000000000000000000000030d40`;
 

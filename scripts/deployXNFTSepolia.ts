@@ -37,6 +37,20 @@ async function main() {
 
     const deployedAddress = await xNft.getAddress();
     console.log(`XNFT deployed on ${network.name} at address: ${deployedAddress}`);
+
+    // Verify the contract
+    console.log('Verifying contract on Etherscan Explorer...');
+    await hre.run("verify:verify", {
+        address: deployedAddress,
+        contract: "contracts/XNFT.sol:XNFT",
+        constructorArguments: [
+            ccipRouterAddressSepolia,
+            linkTokenAddressSepolia,
+            chainIdSepolia
+        ],
+    });
+
+    console.log("Contract verified successfully!");
 }
 
 main()

@@ -48,8 +48,17 @@ const config: HardhatUserConfig = {
       zksync: true,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
       verifyURL: 'https://explorer.sepolia.era.zksync.dev/contract_verification',
+      // Makes verifyURL take priority over etherscan
+      enableVerifyURL: true,
+    
     },
-  }
+  },
+  etherscan: {
+    enabled: false,
+    apiKey: {
+      sepolia: process.env.ETHERSCAN_API_KEY as any,
+    },
+  },
 };
 
 export default config;
